@@ -22,4 +22,8 @@ public interface Configurable<C> {
 
 	C newConfig();
 
+	/**
+	 * Move文件修改场景
+	 */
+
 }
