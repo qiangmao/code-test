@@ -54,6 +54,9 @@ public class GatewayLegacyControllerEndpoint extends AbstractGatewayControllerEn
 
 	@GetMapping("/routes")
 	public Mono<List<Map<String, Object>>> routes() {
+		// 这里添加了一行代码
+		List<Route> routeList = tuple2.getT2();
+			List<Map<String, Object>> allRoutes = new ArrayList<>();
 		Mono<Map<String, RouteDefinition>> routeDefs = this.routeDefinitionLocator
 				.getRouteDefinitions().collectMap(RouteDefinition::getId);
 		Mono<List<Route>> routes = this.routeLocator.getRoutes().collectList();
