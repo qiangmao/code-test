@@ -82,6 +82,7 @@ public class AbstractGatewayControllerEndpoint implements ApplicationEventPublis
 	@Override
 	public void setApplicationEventPublisher(ApplicationEventPublisher publisher) {
 		this.publisher = publisher;
+		// 做了修改
 	}
 
 	// TODO: Add uncommited or new but not active routes endpoint
