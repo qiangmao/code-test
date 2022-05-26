@@ -44,6 +44,11 @@ public class GatewayToStringStyler extends DefaultToStringStyler {
 		this.instanceClass = instanceClass;
 	}
 
+	private void log() {
+		// 新增一段代码
+		System.out.println("新增一段日志");
+	}
+
 	@Override
 	public void styleStart(StringBuilder buffer, Object obj) {
 		if (!obj.getClass().isArray()) {

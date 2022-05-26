@@ -1,0 +1,8 @@
+package org.springframework.cloud.gateway;
+
+/**
+ * 新增了一个新的类
+ */
+public class NewClass {
+
+}
