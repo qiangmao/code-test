@@ -56,6 +56,7 @@ public class GatewayLegacyControllerEndpoint extends AbstractGatewayControllerEn
 	public Mono<List<Map<String, Object>>> routes() {
 		// 添加冲突代码
 		List<Map<String, Object>> allRoutes = new ArrayList<>();
+		List<String> names = new ArrayList();
 		Mono<Map<String, RouteDefinition>> routeDefs = this.routeDefinitionLocator
 				.getRouteDefinitions().collectMap(RouteDefinition::getId);
 		Mono<List<Route>> routes = this.routeLocator.getRoutes().collectList();
